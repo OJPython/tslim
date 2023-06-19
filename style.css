@@ -1,0 +1,175 @@
+.icon{
+  color: blue;
+  font-size: 10px;
+
+}
+:root{
+  --bg-color: #2B3D42;
+  --bg-color2: #677D81;
+  --text-color: white;
+  --main-color: grey;
+  --hover-color: #CDDCDF;
+  --menu-font-size: 1.1rem;
+  --menu-font-size2: 0.8rem;
+  --hover-color2:black;
+
+}
+
+a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+ul{
+  list-style: none;
+}
+
+body{
+  min-height: 100vh;
+  background: linear-gradient(to bottom, var(--bg-color), black);
+
+}
+
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 10px 10px;
+  transition: all .50s ease;
+
+
+}
+.logo i{
+  display: flex;
+  padding: 0px 5px;
+}
+.logo{
+  display: flex;
+  align-items: left;
+  margin-left: 10px;
+  font-size: var(--menu-font-size);
+}
+.user i{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+
+.navbar{
+  display: flex;
+  align-items: center;
+  margin: 0px 0px;
+
+}
+
+.navbar a{
+  font-size:var(--menu-font-size);
+  font-weight: 500;
+  margin: 0px 4px;
+  padding: 0px 4px;
+  transition: all 0.5s ease;
+}
+
+.navbar a:hover{
+  color: var(--hover-color);
+
+}
+
+.navbar a.active{
+  color: var(--hover-color);
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0px;
+  margin-right: 0px;
+}
+
+.menu{
+  display: flex;
+  color: var(--text-color);
+  margin-left: 8px;
+
+}
+
+.menu i{
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width:923px){
+  .menu i{
+    display: block;
+    transition: 1s;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 100px;
+    height: 25vh;
+    padding-left: 0px;
+    background: var(--bg-color2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+
+  }
+  .navbar a{
+    display: block;
+    font-size:var(--menu-font-size2);
+    font-weight: 500;
+    margin: 10px 0px;
+    padding-left: 0px;
+
+  }
+
+  .navbar a:hover{
+    color: var(--hover-color2);
+
+  }
+
+  .navbar a.active{
+    color: var(--hover-color2);
+  }
+  .navbar.open{
+    right: 3%;
+  }
+
+}
+
+@media (max-width:430px){
+  .main .user{
+    display: none;
+  }
+  .navbar.open{
+    right: 3%;
+  }
+}
+}
+
+@media (max-width: 330px){
+  .main .superuser{
+    display: none;
+  }
+  .navbar.open{
+    right: 3%;
+  }
+}
